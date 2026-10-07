@@ -9,14 +9,14 @@ export const ExperienceSection: React.FC = () => {
     <section id="experience" className="py-20 px-4 sm:px-6 max-w-6xl mx-auto w-full">
       {/* Section Header */}
       <div className="mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d8e2ff] text-[#004493] text-xs font-mono mb-3">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d8e2ff] dark:bg-blue-950/60 text-[#004493] dark:text-blue-300 text-xs font-mono mb-3 border border-blue-200/40 dark:border-blue-800/40">
           <Briefcase className="w-3.5 h-3.5" />
           <span>Professional Background</span>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1b1b1d] tracking-tight">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1b1b1d] dark:text-slate-100 tracking-tight">
           Work Experience
         </h2>
-        <p className="text-[#414755] mt-2 max-w-2xl text-base">
+        <p className="text-[#414755] dark:text-slate-300 mt-2 max-w-2xl text-base">
           Proven track record in driving quality engineering, cancer care software releases, automated test pipelines, and cloud reliability at Navya Care.
         </p>
       </div>
@@ -34,32 +34,32 @@ export const ExperienceSection: React.FC = () => {
                 onClick={() => setSelectedExpIndex(index)}
                 className={`p-5 rounded-2xl cursor-pointer transition-all duration-200 border text-left ${
                   isSelected
-                    ? 'bg-white border-[#0058bc] shadow-md ring-1 ring-[#0058bc]/20'
-                    : 'bg-white/60 hover:bg-white border-[#c1c6d7]/40 shadow-xs'
+                    ? 'bg-white dark:bg-slate-900 border-[#0058bc] dark:border-blue-500 shadow-md ring-1 ring-[#0058bc]/20'
+                    : 'bg-white/60 dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-900 border-[#c1c6d7]/40 dark:border-slate-800 shadow-xs'
                 }`}
               >
                 <div className="flex items-center justify-between gap-2 mb-1.5">
-                  <span className="font-bold text-[#1b1b1d] text-base">
+                  <span className="font-bold text-[#1b1b1d] dark:text-slate-100 text-base">
                     {exp.role}
                   </span>
                   {exp.badge && (
-                    <span className="px-2 py-0.5 rounded-full text-[11px] font-mono font-medium bg-[#d8e2ff] text-[#004493]">
+                    <span className="px-2 py-0.5 rounded-full text-[11px] font-mono font-medium bg-[#d8e2ff] dark:bg-blue-950/60 text-[#004493] dark:text-blue-300 border border-blue-200/40 dark:border-blue-800/40">
                       {exp.badge}
                     </span>
                   )}
                 </div>
 
-                <div className="text-sm font-semibold text-[#0058bc] mb-2">
+                <div className="text-sm font-semibold text-[#0058bc] dark:text-blue-400 mb-2">
                   {exp.company}
                 </div>
 
-                <div className="flex items-center gap-4 text-xs text-[#717786] font-mono">
+                <div className="flex items-center gap-4 text-xs text-[#717786] dark:text-slate-400 font-mono">
                   <span className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3 text-[#0058bc]" />
+                    <Calendar className="w-3 h-3 text-[#0058bc] dark:text-blue-400" />
                     {exp.period}
                   </span>
                   <span className="flex items-center gap-1">
-                    <MapPin className="w-3 h-3 text-[#0058bc]" />
+                    <MapPin className="w-3 h-3 text-[#0058bc] dark:text-blue-400" />
                     {exp.location}
                   </span>
                 </div>
@@ -73,33 +73,33 @@ export const ExperienceSection: React.FC = () => {
           {(() => {
             const exp = WORK_EXPERIENCE[selectedExpIndex];
             return (
-              <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#c1c6d7]/40 shadow-sm">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#c1c6d7]/30">
+              <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-[#c1c6d7]/40 dark:border-slate-800 shadow-sm">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#c1c6d7]/30 dark:border-slate-800">
                   <div>
-                    <h3 className="text-2xl font-bold text-[#1b1b1d]">
+                    <h3 className="text-2xl font-bold text-[#1b1b1d] dark:text-slate-100">
                       {exp.role}
                     </h3>
-                    <div className="text-base font-semibold text-[#0058bc] mt-1">
+                    <div className="text-base font-semibold text-[#0058bc] dark:text-blue-400 mt-1">
                       {exp.company}
                     </div>
                   </div>
 
                   <div className="text-left sm:text-right">
-                    <div className="font-mono text-sm text-[#1b1b1d] font-semibold flex items-center sm:justify-end gap-1.5">
-                      <Calendar className="w-4 h-4 text-[#0058bc]" />
+                    <div className="font-mono text-sm text-[#1b1b1d] dark:text-slate-200 font-semibold flex items-center sm:justify-end gap-1.5">
+                      <Calendar className="w-4 h-4 text-[#0058bc] dark:text-blue-400" />
                       {exp.period}
                     </div>
-                    <div className="font-mono text-xs text-[#717786] mt-1 flex items-center sm:justify-end gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-[#0058bc]" />
+                    <div className="font-mono text-xs text-[#717786] dark:text-slate-400 mt-1 flex items-center sm:justify-end gap-1">
+                      <MapPin className="w-3.5 h-3.5 text-[#0058bc] dark:text-blue-400" />
                       {exp.location}
                     </div>
                   </div>
                 </div>
 
                 {exp.notes && (
-                  <div className="my-5 p-3.5 rounded-xl bg-[#d8e2ff]/50 border border-[#adc6ff]/50 flex items-start gap-2.5">
-                    <Award className="w-4 h-4 text-[#0058bc] mt-0.5 flex-shrink-0" />
-                    <p className="text-xs sm:text-sm text-[#004493] font-medium italic">
+                  <div className="my-5 p-3.5 rounded-xl bg-[#d8e2ff]/50 dark:bg-blue-950/40 border border-[#adc6ff]/50 dark:border-blue-800/40 flex items-start gap-2.5">
+                    <Award className="w-4 h-4 text-[#0058bc] dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                    <p className="text-xs sm:text-sm text-[#004493] dark:text-blue-200 font-medium italic">
                       {exp.notes}
                     </p>
                   </div>
@@ -107,13 +107,13 @@ export const ExperienceSection: React.FC = () => {
 
                 {/* Achievements List */}
                 <div className="my-6">
-                  <h4 className="text-xs font-mono font-bold text-[#717786] uppercase tracking-wider mb-4">
+                  <h4 className="text-xs font-mono font-bold text-[#717786] dark:text-slate-400 uppercase tracking-wider mb-4">
                     Key Achievements & Responsibilities
                   </h4>
                   <ul className="space-y-3.5">
                     {exp.achievements.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-[#414755] leading-relaxed">
-                        <CheckCircle2 className="w-4 h-4 text-[#0058bc] mt-1 flex-shrink-0" />
+                      <li key={idx} className="flex items-start gap-3 text-sm text-[#414755] dark:text-slate-300 leading-relaxed">
+                        <CheckCircle2 className="w-4 h-4 text-[#0058bc] dark:text-blue-400 mt-1 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -121,15 +121,15 @@ export const ExperienceSection: React.FC = () => {
                 </div>
 
                 {/* Technologies used in this role */}
-                <div className="pt-6 border-t border-[#c1c6d7]/30">
-                  <h4 className="text-xs font-mono font-bold text-[#717786] uppercase tracking-wider mb-3">
+                <div className="pt-6 border-t border-[#c1c6d7]/30 dark:border-slate-800">
+                  <h4 className="text-xs font-mono font-bold text-[#717786] dark:text-slate-400 uppercase tracking-wider mb-3">
                     Technologies & Tools Applied
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-[#f0edef] text-[#1b1b1d] rounded-lg text-xs font-mono border border-[#c1c6d7]/40"
+                        className="px-3 py-1 bg-[#f0edef] dark:bg-slate-800 text-[#1b1b1d] dark:text-slate-200 rounded-lg text-xs font-mono border border-[#c1c6d7]/40 dark:border-slate-700"
                       >
                         {tech}
                       </span>

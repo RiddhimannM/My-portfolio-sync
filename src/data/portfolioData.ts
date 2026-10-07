@@ -91,10 +91,10 @@ export const PROJECTS: ProjectItem[] = [
     id: 'cancer-api-chain',
     title: 'API chaining to get the Treatment Options for Stage IV Breast Cancer',
     period: '12/2023',
-    category: 'API & NLP',
+    category: 'API Chaining',
     description: 'This project uses two APIs that expand an abridged treatment regimen into a language that is understood by patients. Translates dense clinical oncological protocols into clear, structured, compassionate guidance for patients and families.',
     impact: 'Directly powers clinical oncology reports delivering personalized treatment options for Stage IV Breast Cancer patients.',
-    technologies: ['Python', 'REST API Chaining', 'Postman', 'Oncology NLP', 'JSON Schema Validation'],
+    technologies: ['Python', 'REST API Chaining', 'Postman', 'JSON Schema Validation'],
     demoType: 'api-chain',
     codeSnippet: `async function fetchExpandedCancerRegimen(clinicalCode) {
     const rawRegimen = await api.get('/oncology/regimen/' + clinicalCode);
@@ -111,8 +111,8 @@ export const PROJECTS: ProjectItem[] = [
     period: '12/2023',
     category: 'Monitoring & DevOps',
     description: 'Based on the support issues and negative feedback from other teams, I have set up a CloudWatch insights dashboard in AWS that monitors any failure logs in a given span of time, ensuring the application’s overall health and effectiveness.',
-    impact: 'Decreased incident detection time (MTTD) from hours to under 3 minutes with automated failure cluster alerts.',
-    technologies: ['AWS CloudWatch', 'Logs Insights', 'Canary Metrics', 'Production Monitoring', 'KQL / Query Syntax'],
+    impact: 'Decreased incident detection time and response time for faster and efficient turnaround for production support.',
+    technologies: ['AWS CloudWatch', 'Logs Insights', 'Canary Metrics', 'Production Monitoring'],
     demoType: 'cloudwatch',
     codeSnippet: `fields @timestamp, @message, @logStream, status_code
 | filter @message like /ERROR|Exception|500|Timeout/

@@ -16,7 +16,7 @@ export interface ProjectItem {
   description: string;
   impact?: string;
   technologies: string[];
-  category: 'Automation' | 'API & NLP' | 'Monitoring & DevOps';
+  category: 'Automation' | 'API & NLP' | 'API Chaining' | 'Monitoring & DevOps' | string;
   codeSnippet?: string;
   demoType?: 'jenkins' | 'api-chain' | 'cloudwatch';
 }
